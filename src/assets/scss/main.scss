@@ -1,0 +1,94 @@
+// Import the minimum requirements for Bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+$primary: #88ad3a;
+$ra-gray: #494c51;
+
+$custom-colors: (
+        "primary": $primary,
+        "ra-gray": $ra-gray
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #2c2c2c;
+  //color: $ra-gray;
+  line-height: 1.2;
+}
+
+body {
+  color: #626262 !important;
+}
+
+.btn-primary {
+  color: white !important;
+  background-color: #88ad3a;
+  border-color: #88ad3a;
+}
+
+
+
+/* VueJS Transitions */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */
+{
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/* End of VueJS Transitions */
+
+// Imports Bootstrap and all it's default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.btn{
+  position: relative;
+}
+.btn:has(span) .vue-feather{
+  position: absolute;
+  top: 0.2rem;
+}
+.btn span{
+  padding-left: 1.7rem;
+  padding-right: 0.5rem;
+}
+
+.table .btn span{
+  padding-left: .5rem;
+}
+.table .btn:has(span){
+  margin-top: .5rem;
+}
+.table .btn .vue-feather{
+  position: relative;
+  top: 0.2rem;
+  width: 0.9rem;
+}
+.table .btn:has(span) .vue-feather{
+  top: 0.2rem;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}

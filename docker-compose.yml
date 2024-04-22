@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  fe:
+    image: mrln:latest
+    command: bash -c "npm run serve"
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+
