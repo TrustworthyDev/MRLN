@@ -798,7 +798,7 @@ export default {
       console.log(formElement)
       if (formElement.newIncludeTag.trim() !== '') {
         if (tagType === 'includes') {
-          formElement.includesTags.push({ data : formElement.newIncludeTag.trim(), isSensitive: true });
+          formElement.includesTags.push({ data : formElement.newIncludeTag.trim(), isSensitive: false });
           formElement.newIncludeTag = '';
         } else if (tagType === 'excludes') {
           formElement.excludesTags.push({ data : formElement.newExcludeTag.trim(), isSensitive: false });
